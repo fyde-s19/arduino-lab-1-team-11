@@ -21,7 +21,8 @@
 
   http://www.arduino.cc/en/Tutorial/Blink
 */
-
+void ownDelay(int time);
+void toggle(int a);
 // the setup function runs once when you press reset or power the board
 int i = 0;
 void setup() {
@@ -41,19 +42,24 @@ void loop() {
  }
 
 while(i > 1)
-{ 
+ { 
   toggle(i);        //Counting down to 1, from 100, changing the duty cycle
-  
   i--;
  }
+ 
 }
 
 
+void ownDelay(int time)
+{
+  unsigned long mytime = micros();
+  while(micros()-mytime <= time);
+}
 
 void toggle(int a)
 {
   digitalWrite(2, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(a);                       // wait for a second
+  ownDelay(a*60);                      
   digitalWrite(2, LOW);    // turn the LED off by making the voltage LOW
-  delay(100-a);
+  ownDelay((100-a)*60);
 }
