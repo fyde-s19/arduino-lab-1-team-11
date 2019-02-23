@@ -32,24 +32,28 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  int on[17] = {2,4,6,8,10,12,14,16,18,16,14,12,10,8,6,4,2};  //maybe use a counter loop here
-  int off[17] = {18,16,14,12,10,8,6,4,2,4,6,8,10,12,14,16,18};
-  
-  
-  if(i > 16)
-  {
-    i = 0;
-  }
 
-  toggle(on[i],off[i]);
+ while(i < 100)  
+ { 
+  toggle(i);        //Counting up to 100, from 1, slowly changing the duty cycle
   
   i++;
+ }
+
+while(i > 1)
+{ 
+  toggle(i);        //Counting down to 1, from 100, changing the duty cycle
+  
+  i--;
+ }
 }
 
-void toggle(int on, int off)
+
+
+void toggle(int a)
 {
   digitalWrite(2, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(on);                       // wait for a second
+  delay(a);                       // wait for a second
   digitalWrite(2, LOW);    // turn the LED off by making the voltage LOW
-  delay(off);
+  delay(100-a);
 }
