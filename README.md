@@ -1,1 +1,3 @@
-# arduino-lab-1-team-11
+1a. These embedded systems aren't designed to work only one time, they are built for many uses. Without the loop the integrated system would need to go through the setup every time it runs. By having a setup and a loop system the integrated circuit is more efficient and easier to use.
+ b. The compiler has to translate the code into the computers language so it can run it also optimizes the machine code so it can run smoothly and efficiently.
+ c. The frequency decreases and eventually reaches a point where there is noticeable blinking rather than fading. In real world an alternative to PWM LEDs is to use analog dimming. Through the use of a potentiometer one can control the current that runs to the LED, thereby controlling its brightness (although this is not as efficient).
