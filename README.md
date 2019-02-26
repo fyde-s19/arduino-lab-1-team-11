@@ -1,1 +1,4 @@
 # arduino-lab-1-team-11
+1a. The setup portion of an embedded system imports the necessary libraries/variables/functions that are required for the rest of the code in the program to work. The loop portion contains the code that will do the "work" and run over and over using those variables and functions from the setup. 
+1b. The code needs to be compiled so that the higher level language that we like to write in can be converted into machine code for the computer to understand. 
+1c. At a certain point the frequency becomes too low for the dimming effect to still take place; we begin to see the actual blinking, because the LED is not being switched on and off fast enough. Real dimmers always rapidly switch the light on and off, but the way in which they change the duty cycles creates the speed of the dimming. 
